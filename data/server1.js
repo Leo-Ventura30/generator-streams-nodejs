@@ -1,4 +1,4 @@
-// curl -X GET "localhost:4000/cart" --data '{"id":"123"}'
+// curl -X GET "localhost:3000/prodructs"
 
 const {createServer} = require('http'),
       {parse} = require('url'),
@@ -14,6 +14,7 @@ async function handler(request, response) {
         id: randomUUID(),
         product: productName
       }
+      console.log('product request', result.id);
       return response.end(JSON.stringify({result}))
   } 
   return response.end('hey')

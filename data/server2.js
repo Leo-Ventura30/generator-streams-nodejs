@@ -9,7 +9,7 @@ async function handler(request, response) {
       for await (const data of request){
         const item = JSON.parse(data)
         console.log('response', item)
-        return response.end(`proccessed item ${item.id}`)
+        return response.end(`proccessed item ${item}`)
       }
     }
   return response.end('hey')
